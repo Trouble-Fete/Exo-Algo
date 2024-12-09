@@ -78,9 +78,11 @@ console.info("Exercice 6 : ", getMax([1, 2, 3, 5, 10, 8, 6]));
 // Ajuste la fonction qui prend en paramètre un tableau et qui doit retourner le plus petit nombre du tableau.
 // Exemple : [1, 2, 3] => 1
 
-// export const getMin = () => {}
+export const getMin = (number) => {
+	return Math.min(...number);
+};
 
-// console.info("Exercice 7 : ", getMin([1, 2, 3]));
+console.info("Exercice 7 : ", getMin([1, 2, 3, 0, -10, -5]));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 8
@@ -88,9 +90,14 @@ console.info("Exercice 6 : ", getMax([1, 2, 3, 5, 10, 8, 6]));
 // Ajuste la fonction qui prend en paramètre une string et qui doit retourner la string sans les voyelles.
 // Exemple : "Hello" => "Hll"
 
-// export const removeVowels = () => {}
+export const removeVowels = (string) => {
+	return string.replace(/[aeiouAEIOU]/g, "");
+};
 
-// console.info("Exercice 8 : ", removeVowels("Hello"));
+console.info(
+	"Exercice 8 : ",
+	removeVowels("Hello, I love you won't you tell me your name"),
+);
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 9
