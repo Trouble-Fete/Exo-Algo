@@ -136,9 +136,11 @@ console.info("Exercice 10 : ", getStringRotations("Hello"));
 // Ajuste la fonction qui prend en paramètre un tableau et qui doit ajouter le nombre 1 à chaque élément du tableau.
 // Exemple : [1, 2, 3] => [2, 3, 4]
 
-// export const incrementArray = () => {}
+export const incrementArray = (arrayNumber) => {
+	return arrayNumber.map((number) => number + 1);
+};
 
-// console.info("Exercice 11 : ", incrementArray([1, 2, 3]));
+console.info("Exercice 11 : ", incrementArray([1, 2, 3]));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 12
@@ -146,9 +148,11 @@ console.info("Exercice 10 : ", getStringRotations("Hello"));
 // Ajuste la fonction qui prend en paramètre un tableau de string et qui doit retourner un tableau avec la longueur de chaque string.
 // Exemple : ["Hello", "World"] => [5, 5]
 
-// export const getLengths = () => {}
+export const getLengths = (numberLetter) => {
+	return numberLetter.map((numberLetter) => numberLetter.length);
+};
 
-// console.info("Exercice 12 : ", getLengths(["Hello", "World"]));
+console.info("Exercice 12 : ", getLengths(["Hello", "World", "chacha"]));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 13
@@ -156,9 +160,11 @@ console.info("Exercice 10 : ", getStringRotations("Hello"));
 // Ajuste la fonction qui prend en paramètre un tableau de string et qui doit retourner un tableau avec toutes les premières lettres de chaque string.
 // Exemple : ["Hello", "World"] => ["H", "W"]
 
-// export const getFirstLetters = () => {}
+export const getFirstLetters = (firstLetter) => {
+	return firstLetter.map((firstLetter) => firstLetter.charAt(0));
+};
 
-// console.info("Exercice 13 : ", getFirstLetters(["Hello", "World"]));
+console.info("Exercice 13 : ", getFirstLetters(["Hello", "World"]));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 14
@@ -166,9 +172,13 @@ console.info("Exercice 10 : ", getStringRotations("Hello"));
 // Ajuste la fonction qui prend en paramètre un tableau de string et qui doit retourner un tableau avec toutes les dernières lettres de chaque string.
 // Exemple : ["Hello", "World"] => ["o", "d"]
 
-// export const getLastLetters = () => {}
+export const getLastLetters = (lastLetter) => {
+	return lastLetter.map((lastLetter) =>
+		lastLetter.charAt(lastLetter.length - 1),
+	);
+};
 
-// console.info("Exercice 14 : ", getLastLetters(["Hello", "World"]));
+console.info("Exercice 14 : ", getLastLetters(["Hello", "World"]));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 15
@@ -176,14 +186,18 @@ console.info("Exercice 10 : ", getStringRotations("Hello"));
 // Ajuste la fonction qui prend en paramètre un tableau de string et qui doit renvoyer tout les string qui ont une longueur de 5 caractères ou plus.
 // Exemple : ["Hello", "World","Test", "Salut", "Yo"] => ["Hello", "World", "Salut"]
 
-// export const filterLongStrings = () => {
-
-// };
-
-// console.info(
-// 	"Exercice 15 : ",
-// 	filterLongStrings(["Hello", "World", "Test", "Salut", "Yo"]),
-// );
+export const filterLongStrings = (numberCaracterAndMores) => {
+	return numberCaracterAndMores.map(
+		numberCaracterAndMores.filter(
+			(numberCaracterAndMore) => numberCaracterAndMore.length < 5,
+		),
+	);
+};
+// Pas fini encore!!!!!!!!!!!!!!!!
+console.info(
+	"Exercice 15 : ",
+	filterLongStrings(["Hello", "World", "Test", "Salut", "Yo"]),
+);
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 16
