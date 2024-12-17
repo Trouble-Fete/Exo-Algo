@@ -186,12 +186,8 @@ console.info("Exercice 14 : ", getLastLetters(["Hello", "World"]));
 // Ajuste la fonction qui prend en paramètre un tableau de string et qui doit renvoyer tout les string qui ont une longueur de 5 caractères ou plus.
 // Exemple : ["Hello", "World","Test", "Salut", "Yo"] => ["Hello", "World", "Salut"]
 
-export const filterLongStrings = (numberCaracterAndMores) => {
-	return numberCaracterAndMores.map(
-		numberCaracterAndMores.filter(
-			(numberCaracterAndMore) => numberCaracterAndMore.length < 5,
-		),
-	);
+export const filterLongStrings = (arrayStrings) => {
+	return arrayStrings.filter((str) => str.length <= 5);
 };
 // Pas fini encore!!!!!!!!!!!!!!!!
 console.info(
