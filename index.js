@@ -201,9 +201,9 @@ console.info(
 // Ajuste la fonction qui prend une chaîne de caractères en format snake_case et doit retourner une nouvelle chaîne de caractères contenant les mêmes mots, mais sans les underscores.
 // Exemple : "Bonjour_c'est_papy" => "bonjour c'est papy"
 
-// export const snake_case = () => {}
+export const snake_case = () => {};
 
-// console.info("Exercice 16 : ", snake_case("Bonjour_c'est_papy"));
+console.info("Exercice 16 : ", snake_case("Bonjour_c'est_papy"));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 17
