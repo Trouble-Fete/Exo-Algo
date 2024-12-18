@@ -201,7 +201,9 @@ console.info(
 // Ajuste la fonction qui prend une chaîne de caractères en format snake_case et doit retourner une nouvelle chaîne de caractères contenant les mêmes mots, mais sans les underscores.
 // Exemple : "Bonjour_c'est_papy" => "bonjour c'est papy"
 
-export const snake_case = () => {};
+export const snake_case = (replaceString) => {
+	return replaceString.replace(/_/g, " ");
+};
 
 console.info("Exercice 16 : ", snake_case("Bonjour_c'est_papy"));
 
@@ -211,12 +213,14 @@ console.info("Exercice 16 : ", snake_case("Bonjour_c'est_papy"));
 // Ajuste la fonction qui prend en deux paramètres qui sont deux tableaux de string et qui doit retourner un tableau avec tout les éléments des deux tableaux.
 // Exemple : ["Hello", "World"] et ["Test", "Salut"] => ["Hello", "World", "Test", "Salut"]
 
-// export const mergeArrays = () => {}
+export const mergeArrays = (array1, array2) => {
+	return array1.concat(array2);
+};
 
-// console.info(
-// 	"Exercice 17 : ",
-// 	mergeArrays(["Hello", "World"], ["Test", "Example"]),
-// );
+console.info(
+	"Exercice 17 : ",
+	mergeArrays(["Hello", "World"], ["Test", "Example"]),
+);
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 18
@@ -224,13 +228,13 @@ console.info("Exercice 16 : ", snake_case("Bonjour_c'est_papy"));
 // Ajuste la fonction qui prend en paramètre un tableau de string et qui doit retourner toutes les strings qui ont la lettre "e".
 // Exemple : ["Poulet", "Chat", "Chien", "Cheval"] => ["Poulet", "Chien", "Cheval"].
 
-// export const filterStringsWithE = () => {
-
-// }
-// console.info(
-// 	"Exercice 18 : ",
-// 	filterStringsWithE(["Poulet", "Chat", "Chien", "Cheval"]),
-// );
+export const filterStringsWithE = (arrayString) => {
+	return arrayString.filter((string) => string.includes("e"));
+};
+console.info(
+	"Exercice 18 : ",
+	filterStringsWithE(["Poulet", "Chat", "Chien", "Cheval"]),
+);
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 19
