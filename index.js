@@ -242,11 +242,15 @@ console.info(
 // Ajuste la fonction qui prend en paramètre un tableau de nombres et qui doit retourner tous les nombres qui sont pairs par ordre croissant.
 // Exemple : [2, 9, 6, 5, 6] => [2, 6, 6].
 
-// export const filterAndSortEvenNumbers = () => {
+export const filterAndSortEvenNumbers = (arrayNumber) => {
+	const eventNumber = arrayNumber.filter((number) => number % 2 === 0);
+	return eventNumber.sort((a, b) => a - b);
+};
 
-// };
-
-// console.info("Exercice 19 : ", filterAndSortEvenNumbers([2, 9, 6, 5, 6]));
+console.info(
+	"Exercice 19 : ",
+	filterAndSortEvenNumbers([2, 9, 6, 5, 20, 16, 6]),
+);
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 20
@@ -256,12 +260,21 @@ console.info(
 // findShort("Prachett is the best author in the world") // 2
 // findShort("The quick brown fox jumps over the lazy dog") // 3
 
-// export const findShort = () => {}
+export const findShort = (stringLength) => {
+	const word = stringLength.split(" ");
+	let shortWord = word[0].length;
+	for (let i = 1; i < word.length; i++) {
+		if (word[i].length < shortWord) {
+			shortWord = word[i].length;
+		}
+	}
+	return shortWord;
+};
 
-// console.info(
-// 	"Exercice 20 : ",
-// 	findShort("Prachett is the best author in the world"),
-// );
+console.info(
+	"Exercice 20 : ",
+	findShort("Prachett is the best author in the world"),
+);
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 21
