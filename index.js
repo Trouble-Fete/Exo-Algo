@@ -329,13 +329,14 @@ console.info(
 // Écrivez une fonction qui prend un tableau de string et renvoie un tableau de string triées par ordre alphabétique.
 // Exemple : sortString(["Banana", "Orange", "Apple", "Mango"]) // ["Apple", "Banana", "Mango", "Orange"]
 
-// export const sortString = () => {;
-//   };
+export const sortString = (string) => {
+	return string.sort();
+};
 
-// console.info(
-// 	"Exercice 25 : ",
-// 	sortString(["Banana", "Orange", "Apple", "Mango"]),
-// );
+console.info(
+	"Exercice 25 : ",
+	sortString(["Banana", "xyplophone", "Orange", "Apple", "Mango"]),
+);
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 26
