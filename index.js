@@ -283,9 +283,15 @@ console.info(
 // Deux chaînes sont des anagrammes si elles contiennent les mêmes caractères, quel que soit l'ordre.
 // Exemple : anagram("listen", "silent") // true
 
-// export const anagram = () => {}
+export const anagram = (string1, string2) => {
+	const str1 = string1.split("").sort().join("");
+	const str2 = string2.split("").sort().join("");
+	if (str1 === str2) {
+		return true;
+	}
+};
 
-// console.info("Exercice 21 : ", anagram("listen", "silent"));
+console.info("Exercice 21 : ", anagram("listen", "silent"));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 22
