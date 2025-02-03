@@ -422,6 +422,7 @@ console.info(
 // );
 
 /*
+--------------------------------------------------------------------------------------------------------------------
 Créé une fonction countLetters qui compte, dans une string donnée, le nombre de fois qu'une lettre apparait.
 
 Exemples :
