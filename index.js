@@ -420,3 +420,26 @@ console.info(
 // 		"3:3",
 // 	]),
 // );
+
+/*
+Créé une fonction countLetters qui compte, dans une string donnée, le nombre de fois qu'une lettre apparait.
+
+Exemples :
+* "" et "a" -> 0
+* "a" et "a" -> 1
+* "aaaaabbbaa" et "a" -> 7
+* "bbacbaaa" et "c" -> 1
+* "bbcc" et "a" -> 0
+*/
+function countLetters(givenString, letter) {
+	// Your code here !
+	let count = 0;
+	let searchLetter = givenString.indexOf(letter);
+	while (searchLetter !== -1) {
+		count++;
+		searchLetter = givenString.indexOf(letter, searchLetter + letter.length);
+	}
+	return count;
+}
+console.info("Exercice Bonus : ", countLetters("aaaaabbcc", "a"));
+export default countLetters;
