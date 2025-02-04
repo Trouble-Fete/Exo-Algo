@@ -299,9 +299,9 @@ console.info("Exercice 21 : ", anagram("listen", "silent"));
 // Écrivez une fonction qui enlève les doubles lettres d'une chaîne donnée.
 // Exemple : removeDoubleLetters("google") // "gogle"
 
-// export const removeDoubleLetters = () => {}
+export const removeDoubleLetters = () => {};
 
-// console.info("Exercice 22 : ", removeDoubleLetters("google"));
+console.info("Exercice 22 : ", removeDoubleLetters("google"));
 
 //----------------------------------------------------------------------------------------------//
 
@@ -444,3 +444,49 @@ function countLetters(givenString, letter) {
 }
 console.info("Exercice Bonus : ", countLetters("aaaaabbcc", "a"));
 export default countLetters;
+
+// Bonus Abdou 2:
+
+/*
+Créé une fonction getFibonacciSequence qui prend un nombre n en paramètre et retourne un tableau contenant les n premiers nombres de la suite de Fibonacci.
+
+Détails
+
+* La suite de Fibonacci commence par les nombres 0 et 1.
+* Chaque nombre suivant est la somme des deux nombres précédents.
+* Par exemple, pour n = 5, la fonction devrait retourner [0, 1, 1, 2, 3].
+
+Si n est inférieur ou égal à 0, la fonction doit retourner un tableau vide []
+*/
+
+function getFibonacciSequence(size) {
+	if (size <= 0) return [];
+
+	const sequence = [0, 1];
+
+	for (let i = 2; i < size; i++) {
+		sequence.push(sequence[i - 1] + sequence[i - 2]);
+	}
+
+	return sequence.slice(0, size);
+}
+
+console.info("Exercice Bonus Abdou 2:", getFibonacciSequence(1));
+
+// autre solution:
+
+// function getFibonacciSequence1(size) {
+//   // Your code here !
+//   if(size === 0 || size < 0){
+//     return []
+//   }
+//   const result = [0 , 1]
+//   for(let i = 2; i < size; i++){
+//     result.push(result[i - 1] + result[i - 2])
+//     // console.log(result)
+//   }
+//   return result;
+// }
+// // biome-ignore lint/suspicious/noConsoleLog: <explanation>
+// console.log('resultat : ',getFibonacciSequence1(1))
+// export default getFibonacciSequence1;
